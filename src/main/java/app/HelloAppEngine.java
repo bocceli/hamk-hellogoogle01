@@ -34,7 +34,7 @@ public class HelloAppEngine extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
 
-        out.println("<h2>Hello App With Google SQL DB</h2>");
+        out.println("<h1>Hello App With Google SQL DB</h1>");
 
         DataSource pool = null;
         Connection conn = null;
@@ -81,6 +81,8 @@ public class HelloAppEngine extends HttpServlet {
 
                 out.println("<table>");
 
+                out.println("<tr><td>Breed</td><td>Weight</td><td>Age</td><td>Name</td></tr>");
+
                 while (RS.next()) {
                     out.println("<tr>");
                     out.println("<td>");
@@ -107,9 +109,6 @@ public class HelloAppEngine extends HttpServlet {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-        RequestDispatcher rd = request.getRequestDispatcher("layout.html");
-        rd.include(request, response);
     }
 
 
