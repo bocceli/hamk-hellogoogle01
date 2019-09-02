@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
-    <title>Hello Google Cloud SQL App!!</title>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hello App Engine</title>
 </head>
 
 <body>
+<h1>Hello App Engine!</h1>
 
-<h1>Hello App With Google SQL DB</h1>
-<p>
-    <a href="/form-page">Show table</a>
-</p>
-<h2>Fill in</h2>
-
-<form action='/form-page' method='post'>
-    Dog breed: <input type='text' name='breed' value=''><br>
-    Weight: <input type='text' name='weight' value=''><br>
-    Name: <input type="text" name="name" value=""><br>
-    Age: <input type="text" name="age" value=""><br>
-    <input type='submit' name='ok' value='OK'><br>
-</form>
+<table>
+    <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>
+    </tr>
+    <tr>
+        <td><a href='/hello'>Hello servlet</a></td>
+    </tr>
+    <tr>
+        <td><a href='/animal-form'>Animal servlet</a></td>
+    </tr>
+    <tr>
+        <td><a href='/userapi'>User API servlet</a></td>
+    </tr>
+    <tr>
+        <td><a href='/SecretArea/Page1'>Secret area servlet</a></td>
+    </tr>
+</table>
 </body>
 </html>
