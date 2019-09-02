@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 import com.google.appengine.api.utils.SystemProperty;
 
 @WebServlet(
-        name = "HelloGoogleCloudSqlApp",
+        name = "HelloGoogleCloudSqlAppBocek",
         urlPatterns = {"/form-page"}
 )
 public class HelloAppEngine extends HttpServlet {
@@ -58,6 +58,7 @@ public class HelloAppEngine extends HttpServlet {
         }
         try {
             if (conn != null) {
+                Statement stmt = conn.createStatement();
 
                 // Saving part
                 if (request.getMethod().equals("POST")) {
@@ -66,12 +67,17 @@ public class HelloAppEngine extends HttpServlet {
                     String age = request.getParameter("age");
                     String name = request.getParameter("name");
 
-                    Statement stmt = conn.createStatement();
+
                     stmt.executeUpdate(String.format("insert into animal(breed, weight, age, name) values ('%s', '%s', '%s', '%s')", breed, strWeight, age, name));
                 }
 
-                Statement stmt = conn.createStatement();
                 ResultSet RS = stmt.executeQuery("select * from animal");
+
+                out.println("<p>" +
+                        "<a href='/'>" +
+                        "Add new animal" +
+                        "</a>" +
+                        "</p>");
 
                 out.println("<table>");
 
