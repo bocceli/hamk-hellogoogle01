@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+    <title>Hello Google Cloud SQL App!!</title>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="animal-rest-script.js"></script>
+</head>
+<body>
+
+<h1>Hello App With Google SQL DB</h1>
+<p>
+    <a href="/animal-form">Show table</a>
+</p>
+<h2>Fill in</h2>
+
+<form id="animal-rest-form">
+    Dog breed: <input type='text' name='breed' value='' id="breed"><br>
+    Weight: <input type='text' name='weight' value='' id="weight"><br>
+    Name: <input type="text" name="name" value="" id="name"><br>
+    Age: <input type="text" name="age" value="" id="age"><br>
+    <input type='submit' name='ok' value='OK'><br>
+</form>
+
+<div id="table-wrapper">
+    <p>
+        <button id="refresh">Refresh</button>
+    </p>
+    <table id="table">
+        <thead>
+        <tr>
+            <td>id</td>
+            <td>breed</td>
+            <td>weight</td>
+            <td>age</td>
+            <td>name</td>
+            <td>RestApi link</td>
+        </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+
+<h2>Sitemap</h2>
+<ul>
+    <li><a href='/animal-form.html'>Animal form</a></li>
+    <li><a href='/animal-form'>Animal list</a></li>
+    <li><a href='/userapi'>User API</a></li>
+    <li><a href='/SecretArea/Page1'>SecretPage1</a></li>
+</ul>
+</body>
+</html>
